@@ -11,7 +11,7 @@ let postDataElement = async () => {
     const email_value = email_element.value
     const password_value = password_element.value
 
-    let response = await fetch(BASE_URL + 'users', {
+    await fetch(BASE_URL + 'users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,14 +22,12 @@ let postDataElement = async () => {
             password : password_value,
         })
     })
-    
-    name_value = ''
-    email_value = ''
+
+    window.location.reload(true)
 }
 
 button.addEventListener('click', (event) => {
     event.preventDefault()
 
     postDataElement()
-    location.reload
 })
