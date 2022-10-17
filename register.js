@@ -29,5 +29,9 @@ let postDataElement = async () => {
 button.addEventListener('click', (event) => {
     event.preventDefault()
 
+    button.innerHTML = `
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    `
+
     postDataElement()
 })
