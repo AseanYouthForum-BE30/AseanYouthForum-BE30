@@ -3,6 +3,7 @@ let BASEURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
 const emailElement = document.querySelector('#exampleInputEmail1')
 const passwordElement = document.querySelector('#exampleInputPassword1')
 const headerElement = document.getElementById('notif')
+const buttonLogin = document.getElementById('button')
 
 let login = async (email, password) => {
     
@@ -28,14 +29,17 @@ let login = async (email, password) => {
         headerElement.innerHTML = "User Not Found"
     }
 
+    buttonLogin.innerHTML = "Login"
     emailElement.value = ""
     passwordElement.value = ""
 }
 
-document.getElementById('button').addEventListener('click', (event) => {
+buttonLogin.addEventListener('click', (event) => {
     event.preventDefault()
     
-    headerElement.innerHTML = "Proses..."
+    buttonLogin.innerHTML = `
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    `
     
     const email = emailElement.value
     const password = passwordElement.value
