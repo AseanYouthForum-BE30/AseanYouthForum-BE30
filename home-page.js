@@ -6,6 +6,10 @@ let getArticle = async () => {
     let response = await fetch(BaseURL + 'articles', {
         method: 'GET'
     })
+
+    if (!response.ok) {
+        throw new Error("HTTP error " + response.status);
+    }
     
     let articles = await response.json()
 
