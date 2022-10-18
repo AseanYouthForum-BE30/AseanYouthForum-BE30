@@ -1,6 +1,6 @@
 const BaseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
 
-let articleContainer = document.getElementById('article-container')
+let articleContainer = document.getElementById('articles-container')
 
 let getArticle = async () => {
     let response = await fetch(BaseURL + 'articles', {
@@ -19,19 +19,19 @@ let getArticle = async () => {
 
         let articleElement = document.createElement('div')
         
-        articleElement.className = 'row mb-3'
+        articleElement.className = 'row d-flex flex-wrap-reverse mb-3'
 
         articleElement.innerHTML = `
-            <div class="col d-flex justify-content-center" id="article-image">
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
                 <img
                 src="${article.image}"
                 class="img-fluid"
                 style="width: 25vw; height: 30vh"
-                alt="" />
+                alt="article-image"/>
             </div>
             <div class="col d-flex align-items-center justify-content-center flex-column">
-                <h2 id="article-title">${article.title}</h2>
-                <p id="article-content" style="text-align: justify">${article.content}</p>
+                <h2>${article.title}</h2>
+                <p style="text-align: justify">${article.content}</p>
             </div>
         `
 
