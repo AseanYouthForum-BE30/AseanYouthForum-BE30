@@ -3,7 +3,7 @@ const BaseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
 let articleContainer = document.getElementById('article-container')
 
 let getArticle = async () => {
-    let response = await fetch(BaseURL + 'users/1/articles', {
+    let response = await fetch(BaseURL + 'articles', {
         method: 'GET'
     })
     
@@ -22,7 +22,7 @@ let getArticle = async () => {
                 <img
                 src="${article.image}"
                 class="img-fluid"
-                style="width: 30vw; height: 30vh"
+                style="width: 25vw; height: 30vh"
                 alt="" />
             </div>
             <div class="col d-flex align-items-center justify-content-center flex-column">
