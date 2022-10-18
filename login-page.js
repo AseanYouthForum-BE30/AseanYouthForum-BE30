@@ -12,15 +12,16 @@ let login = async (email, password) => {
     })
 
     if (!response.ok) {
-		throw new Error(`HTTP error! status: ${response.status}`);
-	}
+        throw new Error("HTTP error " + response.status);
+    }
 
     let data = await response.json()
     const user = await data.find(d => d.email === email)
 
     if(user){
         if (user.password === password) {
-            sessionStorage.setItem("full_name", user.full_name)
+            localStorage.setItem("id", user.id)
+            localStorage.setItem("full_name", user.full_name)
             headerElement.innerHTML = "Login Success"
         } else {
             headerElement.innerHTML = "Wrong Password"
