@@ -21,19 +21,19 @@ let getArticleByIdUser = async () => {
         if (userArticle.userId == userId){
             const articleElement = document.createElement('div')
 
-            articleElement.className = 'row mb-3'
+            articleElement.className = 'row d-flex flex-wrap mb-3'
 
             articleElement.innerHTML = `
-                <div class="col d-flex justify-content-center" id="article-image">
+                <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                     <img
                     src="${userArticle.image}"
                     class="img-fluid"
-                    style="width: 25vw; height: 30vh"
+                    style="width: 25vw;"
                     alt="" />
                 </div>
                 <div class="col d-flex align-items-center justify-content-center flex-column">
-                    <h2 id="article-title">${userArticle.title}</h2>
-                    <p id="article-content" style="text-align: justify">${userArticle.content}</p>
+                    <h2>${userArticle.title}</h2>
+                    <p style="text-align: justify">${userArticle.content}</p>
                 </div>
             `
 
