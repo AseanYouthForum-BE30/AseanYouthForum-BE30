@@ -37,7 +37,7 @@ let getArticle = async () => {
             style="width: 50vw ;" 
             src="${article.image}" 
             alt="article-image">
-        <p style="text-align: justify;" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias a in excepturi eius fugiat laudantium ad cupiditate quisquam consequatur odio porro veritatis ut, vero laboriosam culpa sequi voluptatibus eaque totam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quae adipisci iusto veritatis exercitationem, excepturi dolores rerum, hic similique aperiam numquam voluptas sint accusamus ad, debitis culpa impedit. Vero, rerum.lo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam error nihil fugit aliquid odio, eveniet iure nulla nam numquam illo sapiente ducimus velit deserunt non corporis delectus incidunt aut libero.</p>
+        <p style="text-align: justify;" >${article.content}</p>
     `
 }
 
