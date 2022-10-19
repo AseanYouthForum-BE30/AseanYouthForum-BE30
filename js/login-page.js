@@ -1,4 +1,4 @@
-let BASEURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
+let baseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
 
 const emailElement = document.querySelector('#exampleInputEmail1')
 const passwordElement = document.querySelector('#exampleInputPassword1')
@@ -7,7 +7,7 @@ const buttonLogin = document.getElementById('button')
 
 let login = async (email, password) => {
     
-    let response = await fetch(BASEURL + 'users', {
+    let response = await fetch(baseURL + 'users', {
         method: 'GET'
     })
 
@@ -22,7 +22,8 @@ let login = async (email, password) => {
         if (user.password === password) {
             localStorage.setItem("id", user.id)
             localStorage.setItem("full_name", user.full_name)
-            headerElement.innerHTML = "Login Success"
+            // headerElement.innerHTML = "Login Success"
+            window.location.href = "dashboard-page.html"
         } else {
             headerElement.innerHTML = "Wrong Password"
         }

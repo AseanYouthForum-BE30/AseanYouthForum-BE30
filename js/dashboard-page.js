@@ -1,11 +1,11 @@
-const BaseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
+const baseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
 
 const articleContainer = document.getElementById('article-container')
 const logoutElement = document.getElementById('logout')
 const userId = localStorage.getItem('id')
 
 let getArticleByIdUser = async () => {
-    let response = await fetch(BaseURL + 'articles', {
+    let response = await fetch(baseURL + 'articles', {
         method: 'GET'
     })
 

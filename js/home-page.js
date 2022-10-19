@@ -1,9 +1,9 @@
-const BaseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
+const baseURL = 'https://63497f50a59874146b2192cc.mockapi.io/ayf/'
 
 let articleContainer = document.getElementById('articles-container')
 
 let getArticle = async () => {
-    let response = await fetch(BaseURL + 'articles', {
+    let response = await fetch(baseURL + 'articles', {
         method: 'GET'
     })
 
@@ -16,6 +16,10 @@ let getArticle = async () => {
     articleContainer.innerHTML = ''
 
     articles.forEach(article => {
+
+        let articleContent = article.content
+
+        let articleContentShort = articleContent.substr(0, articleContent.indexOf('.'))
 
         let articleElement = document.createElement('div')
         
@@ -31,7 +35,8 @@ let getArticle = async () => {
             </div>
             <div class="col d-flex align-items-center justify-content-center flex-column">
                 <h2>${article.title}</h2>
-                <p style="text-align: justify">${article.content}</p>
+                <p style="text-align: justify">${articleContentShort}.</p>
+                <a href="detail-page.html" onclick="localStorage.setItem('articleId', ${article.id})">Detail</a>
             </div>
         `
 

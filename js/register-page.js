@@ -1,4 +1,4 @@
-let BASE_URL = "https://63497f50a59874146b2192cc.mockapi.io/ayf/"
+let baseURL = "https://63497f50a59874146b2192cc.mockapi.io/ayf/"
 
 let nama_element = document.querySelector('#nama_lengkap')
 let email_element = document.querySelector('#email')
@@ -11,7 +11,7 @@ let postDataElement = async () => {
     const email_value = email_element.value
     const password_value = password_element.value
 
-    await fetch(BASE_URL + 'users', {
+    await fetch(baseURL + 'users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ let postDataElement = async () => {
         })
     })
 
-    window.location.reload(true)
+    window.location.href = "login-page.html"
 }
 
 button.addEventListener('click', (event) => {
