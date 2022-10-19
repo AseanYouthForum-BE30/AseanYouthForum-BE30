@@ -15,8 +15,6 @@ let getArticleByIdUser = async () => {
 
     let articles = await response.json()
 
-    console.log(userId)
-
     articleContainer.innerHTML = ''
 
     articles.forEach(userArticle => {
