@@ -30,11 +30,11 @@ let getArticle = async () => {
     let createdAt = new Date(article.createdAt)
 
     articleElement.innerHTML = `
-        <h1>${article.title}</h1>
-        <h4>${userName}</h4>
+        <h1 >${article.title}</h1>
+        <h4 class="text-primary">${userName}</h4>
         <p>${createdAt.toDateString()}</p>
-        <img class="img-fluid mx-auto d-block mb-4" 
-            style="width: 50vw ;" 
+        <img id="img-article" class="img-fluid  d-block mb-4" 
+            
             src="${article.image}" 
             alt="article-image">
         <p style="text-align: justify;" >${article.content}</p>
