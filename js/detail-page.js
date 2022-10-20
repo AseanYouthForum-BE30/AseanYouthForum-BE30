@@ -33,9 +33,10 @@ let getArticle = async () => {
         <h1 >${article.title}</h1>
         <h4 class="text-primary">${userName}</h4>
         <p>${createdAt.toDateString()}</p>
-        <img id="img-article" class="img-fluid  d-block mb-4" 
-            
-            src="${article.image}" 
+        <img 
+            id="img-article"
+            class="img-fluid d-block mb-4"
+            src="${article.image}"
             alt="article-image">
         <p style="text-align: justify;" >${article.content}</p>
     `
