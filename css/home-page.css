@@ -1,0 +1,26 @@
+#hero-title {
+    font-size: 64px;
+}
+
+#hero-content {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 992px) {
+    #hero-title, #hero-content {
+        text-align: center;
+    }
+  }
+
+@media only screen and (max-width: 576px) {
+
+
+    #hero-title {
+        font-size: 48px;
+    }
+    #hero-content {
+        text-align: "justify";
+        font-size: 20px;
+        
+    }
+    }
